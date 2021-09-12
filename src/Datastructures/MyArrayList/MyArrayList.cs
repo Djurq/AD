@@ -4,53 +4,60 @@
     {
         private int[] data;
         private int size;
-
+        
         public MyArrayList(int capacity)
         {
-            // Write implementation here
-            throw new System.NotImplementedException();
+            data = new int[capacity];
         }
 
         public void Add(int n)
         {
-            // Write implementation here
-            throw new System.NotImplementedException();
+            data[size] = n;
+            size++;
         }
 
         public int Get(int index)
         {
-            // Write implementation here
-            throw new System.NotImplementedException();
+            return data[index];
         }
 
         public void Set(int index, int n)
         {
-            // Write implementation here
-            throw new System.NotImplementedException();
+            data[index] = n;
         }
 
         public int Capacity()
         {
-            // Write implementation here
-            throw new System.NotImplementedException();
+            return data.Length;
         }
 
         public int Size()
         {
-            // Write implementation here
-            throw new System.NotImplementedException();
+            return size;
         }
 
         public void Clear()
         {
-            // Write implementation here
-            throw new System.NotImplementedException();
+            for (var i = 0; i < data.Length; i++)
+            {
+                data[i] = 0;
+            }
+
+            size = 0;
         }
 
         public int CountOccurences(int n)
         {
-            // Write implementation here
-            throw new System.NotImplementedException();
+            int Occurences = 0;
+            for (int i = 0; i < data.Length; i++)
+            {
+                if (Get(i) == n)
+                {
+                    Occurences++;
+                }
+            }
+
+            return Occurences;
         }
     }
 }
