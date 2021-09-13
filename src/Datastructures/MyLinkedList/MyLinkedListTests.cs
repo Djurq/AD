@@ -321,10 +321,10 @@ namespace AD
             lst.AddFirst("1");
             lst.AddFirst("2");
             lst.AddFirst("3");
-            string expected = "0";
+            string expected = "1";
 
             // Act
-            lst.Insert(0, "0");
+            lst.Insert(0, "1");
             string actual = lst.GetFirst();
 
             // Assert
