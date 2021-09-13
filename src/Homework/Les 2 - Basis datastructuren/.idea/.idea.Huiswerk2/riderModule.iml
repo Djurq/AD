@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="RIDER_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.5.0/build/netcoreapp2.1" />
+    <content url="file://$USER_HOME$/.nuget/packages/microsoft.testplatform.testhost/16.5.0/build/netcoreapp2.1/x64/testhost.dll" />
+    <content url="file://$USER_HOME$/.nuget/packages/microsoft.testplatform.testhost/16.5.0/build/netcoreapp2.1/x64/testhost.exe" />
+    <content url="file://$USER_HOME$/.nuget/packages/nunit3testadapter/3.16.1/build/netcoreapp2.1/NUnit3.TestAdapter.dll" />
+    <content url="file://$USER_HOME$/.nuget/packages/nunit3testadapter/3.16.1/build/netcoreapp2.1/NUnit3.TestAdapter.pdb" />
+    <content url="file://$USER_HOME$/.nuget/packages/nunit3testadapter/3.16.1/build/netcoreapp2.1/nunit.engine.api.dll" />
+    <content url="file://$USER_HOME$/.nuget/packages/nunit3testadapter/3.16.1/build/netcoreapp2.1/nunit.engine.dll" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/MyArrayList/IMyArrayList.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/MyArrayList/MyArrayList.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/MyArrayList/MyArrayListBuilder.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/MyArrayList/MyArrayListTests.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/MyLinkedList/IMyLinkedList.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/MyLinkedList/MyLinkedList.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/MyLinkedList/MyLinkedListBuilder.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/MyLinkedList/MyLinkedListNode.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/MyLinkedList/MyLinkedListTests.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/MyQueue/IMyQueue.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/MyQueue/MyQueue.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/MyQueue/MyQueueBuilder.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/MyQueue/MyQueueTests.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/MyStack/IMyStack.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/MyStack/MyStack.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/MyStack/MyStackBuilder.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/MyStack/MyStackTests.cs" />
+    <content url="file://$MODULE_DIR$/../.." />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

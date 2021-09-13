@@ -151,7 +151,6 @@ namespace AD
 
         static void Main(string[] args)
         {
-            int[] m = new int[10];
             //Ex1ArrayList();
             //Ex2LinkedList();
             //Ex3Stack();

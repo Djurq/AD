@@ -7,44 +7,52 @@
 
         public MyLinkedList()
         {
-            // Write implementation here
-            throw new System.NotImplementedException();
+            first = new MyLinkedListNode<T>();
         }
 
         public void AddFirst(T data)
         {
-            // Write implementation here
-            throw new System.NotImplementedException();
+            MyLinkedListNode<T> newNode = new MyLinkedListNode<T>();
+            newNode.data = data;
+            newNode.next = first;
+            first = newNode;
+            size++;
         }
 
         public T GetFirst()
         {
-            // Write implementation here
-            throw new System.NotImplementedException();
+            return first.data;
         }
 
         public void RemoveFirst()
         {
-            // Write implementation here
-            throw new System.NotImplementedException();
+            first.next = null;
+            size--;
         }
 
         public int Size()
         {
-            // Write implementation here
-            throw new System.NotImplementedException();
+            return size;
         }
 
         public void Clear()
         {
-            // Write implementation here
-            throw new System.NotImplementedException();
+            size = 0;
         }
 
         public void Insert(int index, T data)
         {
-            // Write implementation here
-            throw new System.NotImplementedException();
+            MyLinkedListNode<T> newNode = new MyLinkedListNode<T>(); 
+            MyLinkedListNode<T> loopNode = new MyLinkedListNode<T>();
+            loopNode = first;
+            for (int i = 0; i < size; i++)
+            {
+                loopNode = loopNode.next;
+                if (i == index)
+                {
+                    
+                }
+            }
         }
 
         public override string ToString()
