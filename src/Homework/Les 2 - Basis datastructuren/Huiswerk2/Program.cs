@@ -151,22 +151,8 @@ namespace AD
 
         static void Main(string[] args)
         {
-            IMyLinkedList<string> lst = DSBuilder.CreateMyLinkedListStringEmpty();
-            lst.AddFirst("1");
-            lst.AddFirst("2");
-            lst.AddFirst("3");
-            string actual2 = lst.ToString();
-            lst.Insert(2, "4");
-
-            string expected = "[3,2,4,1]";
-
-            // Act
-            
-            string actual = lst.ToString();
-            Console.WriteLine(actual2);
-            Console.WriteLine(actual);
-            //Ex1ArrayList();
-            //Ex2LinkedList();
+            Ex1ArrayList();
+            Ex2LinkedList();
             //Ex3Stack();
             //Ex4BracketChecker();
             //Ex5Queue();

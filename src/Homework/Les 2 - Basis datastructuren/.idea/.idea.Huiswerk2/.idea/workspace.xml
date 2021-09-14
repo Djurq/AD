@@ -24,14 +24,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ebcc7fb-ba31-4c52-ae66-ce6151112b6c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Datastructures/MyArrayList/MyArrayList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Datastructures/MyArrayList/MyArrayList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Datastructures/MyLinkedList/MyLinkedList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Datastructures/MyLinkedList/MyLinkedList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Datastructures/MyLinkedList/MyLinkedListTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Datastructures/MyLinkedList/MyLinkedListTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Huiswerk2/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Huiswerk2/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Huiswerk2/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Huiswerk2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Datastructures/MyQueue/MyQueue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Datastructures/MyQueue/MyQueue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Datastructures/MyStack/MyStack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Datastructures/MyStack/MyStack.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Huiswerk2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Huiswerk2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Huiswerk2/riderModule.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Huiswerk2/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Huiswerk2/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,8 +37,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/Gebruiker/RiderProjects/ad2/src/Datastructures/MyLinkedList/MyLinkedList.cs" root0="SKIP_HIGHLIGHTING" />
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -118,8 +118,17 @@
       <workItem from="1631522062557" duration="264000" />
       <workItem from="1631531914914" duration="2047000" />
       <workItem from="1631542937684" duration="331000" />
-      <workItem from="1631546360580" duration="10023000" />
+      <workItem from="1631546360580" duration="10221000" />
+      <workItem from="1631631085942" duration="2418000" />
     </task>
+    <task id="LOCAL-00001" summary="MyarrayList and MyLinkedList done">
+      <created>1631565189928</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1631565189928</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,5 +151,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="MyarrayList and MyLinkedList done" />
+    <option name="LAST_COMMIT_MESSAGE" value="MyarrayList and MyLinkedList done" />
   </component>
 </project>

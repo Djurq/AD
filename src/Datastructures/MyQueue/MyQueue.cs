@@ -4,30 +4,42 @@ namespace AD
 {
     public partial class MyQueue<T> : IMyQueue<T>
     {
+        public MyLinkedList<T> queue = new MyLinkedList<T>();
+        public int size;
+
         public bool IsEmpty()
         {
-            throw new System.NotImplementedException();
+            return queue.Size() == 0;
         }
 
         public void Enqueue(T data)
         {
-            throw new System.NotImplementedException();
+            queue.Insert(queue.Size(), data);
         }
 
         public T GetFront()
         {
-            throw new System.NotImplementedException();
+            if (queue.Size() > 0)
+            {
+                return queue.GetFirst();
+            }
+
+            throw new MyQueueEmptyException();
         }
 
         public T Dequeue()
         {
-            throw new System.NotImplementedException();
+            if (queue.Size() <= 0) throw new MyQueueEmptyException();
+
+            var Dequeued = GetFront();
+            queue.RemoveFirst();
+            return Dequeued;
+
         }
 
         public void Clear()
         {
-            throw new System.NotImplementedException();
+            size = 0;
         }
-
     }
 }
