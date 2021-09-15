@@ -58,31 +58,31 @@ namespace AD
             if (index == 0)
             {
                 AddFirst(data);
+                return;
+            }
+
+            if (index > -1 && index <= size)
+            {
+                MyLinkedListNode<T> loopNode = new MyLinkedListNode<T>();
+                loopNode = first;
+                for (int i = 0; i < size; i++)
+                {
+                    if (i == index - 1)
+                    {
+                        MyLinkedListNode<T> newNode = new MyLinkedListNode<T>();
+                        newNode.next = loopNode.next;
+                        newNode.data = data;
+                        loopNode.next = newNode;
+                        size++;
+                        break;
+                    }
+
+                    loopNode = loopNode.next;
+                }
             }
             else
             {
-                if (index > -1 && index <= size)
-                {
-                    MyLinkedListNode<T> loopNode = new MyLinkedListNode<T>();
-                    loopNode = first;
-                    for (int i = 0; i < size; i++)
-                    {
-                        if (i == index - 1)
-                        {
-                            MyLinkedListNode<T> newNode = new MyLinkedListNode<T>();
-                            newNode.next = loopNode.next;
-                            newNode.data = data;
-                            loopNode.next = newNode;
-                            size++;
-                            break;
-                        }
-                        loopNode = loopNode.next;
-                    }
-                }
-                else
-                {
-                    throw new MyLinkedListIndexOutOfRangeException();
-                }
+                throw new MyLinkedListIndexOutOfRangeException();
             }
         }
 

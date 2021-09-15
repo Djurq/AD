@@ -4,7 +4,6 @@ namespace AD
 {
     public static class BracketChecker
     {
-
         /// <summary>
         ///    Run over all characters in a string, push all '(' characters
         ///    found on a stack. When ')' is found, it shoud match a '(' on
@@ -18,32 +17,78 @@ namespace AD
         /// Returns False otherwise.</returns>
         public static bool CheckBrackets(string s)
         {
-            throw new System.NotImplementedException();
+            MyStack<string> stack = new MyStack<string>();
+            for (int i = 0; i < s.Length; i++)
+            {
+                char c = s[i];
+                if (c == '(')
+                {
+                    stack.Push(c.ToString());
+                }
+                else
+                {
+                    try
+                    {
+                        stack.Pop();
+                    }
+                    catch (MyStackEmptyException)
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            return stack.IsEmpty();
         }
 
 
         /// <summary>
         ///    Run over all characters in a string, when an opening bracket is
-		///    found the closing counterpart from closeChar is pushed on a Stack
+        ///    found the closing counterpart from closeChar is pushed on a Stack
         ///    When an closing bracket is found, it should match the top character
-		///    from this stack.
-		///    
+        ///    from this stack.
+        ///    
         ///    This method will terminate prematurely if a wrong or missmatched
         ///    closing bracket is found and no further inspection is needed.
-		/// </summary>
-		/// <param name="s">The string to check</param>
-		/// <returns>Returns True if all opening brackets are matched by
-		/// it's correct counterpart in a correct order.
+        /// </summary>
+        /// <param name="s">The string to check</param>
+        /// <returns>Returns True if all opening brackets are matched by
+        /// it's correct counterpart in a correct order.
         /// Returns False otherwise.</returns>
+        ///
+        /// ])
         public static bool CheckBrackets2(string s)
         {
-            throw new System.NotImplementedException();
-        }
+            MyStack<string> stack = new MyStack<string>();
+            for (int i = 0; i < s.Length; i++)
+            {
+                char c = s[i];
+                if (c == '(' || c == '[' || c == '{')
+                {
+                    stack.Push(c.ToString());
+                }
+                else
+                {
+                    try
+                    {
+                        var previous = stack.Pop();
+                        if (c == ')' && previous != "(" || c == ']' && previous != "[" || c == '}' && previous != "{")
+                        {
+                            return false;
+                        }
+                    }
+                    catch (MyStackEmptyException)
+                    {
+                        return false;
+                    }
+                }
+            }
 
+            return stack.IsEmpty();
+        }
     }
 
     class BracketCheckerInvalidInputException : Exception
     {
     }
-
 }
