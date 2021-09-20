@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94e37d4b-fa39-4def-83bd-ee3217713bbb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/.idea/.idea.Huiswerk2/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/.idea/.idea.Huiswerk2/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/.idea/.idea.Huiswerk2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/.idea/.idea.Huiswerk2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/Huiswerk2/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/Huiswerk2/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +32,7 @@
       <updated>1631521936527</updated>
       <workItem from="1631521938956" duration="112000" />
       <workItem from="1631531884189" duration="25000" />
+      <workItem from="1631861767818" duration="49000" />
     </task>
     <servers />
   </component>

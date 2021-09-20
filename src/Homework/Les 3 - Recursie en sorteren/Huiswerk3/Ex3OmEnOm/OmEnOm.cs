@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Serialization.Formatters;
 
 namespace AD
 {
@@ -6,7 +7,16 @@ namespace AD
     {
         public static int OmEnOm(int n)
         {
-            throw new System.NotImplementedException();
+            if (n < 0)
+            {
+                throw new OmEnOmNegativeValueException();
+            }
+            if (n <= 1)
+            {
+                return n;
+            }
+
+            return n + OmEnOm(n - 2);
         }
         public static void Run()
         {

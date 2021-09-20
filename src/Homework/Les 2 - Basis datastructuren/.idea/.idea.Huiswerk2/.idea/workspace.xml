@@ -23,11 +23,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ebcc7fb-ba31-4c52-ae66-ce6151112b6c" name="Changes" comment="linkedlist start">
-      <change beforePath="$PROJECT_DIR$/../../Datastructures/MyLinkedList/MyLinkedList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Datastructures/MyLinkedList/MyLinkedList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Huiswerk2/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Huiswerk2/.idea/indexLayout.xml" afterDir="false" />
+    <list default="true" id="1ebcc7fb-ba31-4c52-ae66-ce6151112b6c" name="Changes" comment="BracketChecker done">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Huiswerk2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Huiswerk2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Huiswerk2/BracketChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Huiswerk2/BracketChecker.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +107,17 @@
       <workItem from="1631472550403" duration="2912000" />
       <workItem from="1631522062557" duration="264000" />
       <workItem from="1631531914914" duration="2047000" />
+      <workItem from="1631705252589" duration="44000" />
+      <workItem from="1631861747088" duration="18000" />
     </task>
+    <task id="LOCAL-00001" summary="BracketChecker done">
+      <created>1631705282183</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1631705282183</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,8 +140,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="BracketChecker done" />
+    <option name="LAST_COMMIT_MESSAGE" value="BracketChecker done" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1631705289972">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1631705289972" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1631522151581">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
