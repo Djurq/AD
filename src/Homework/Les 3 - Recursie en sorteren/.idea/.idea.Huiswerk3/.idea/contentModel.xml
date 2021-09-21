@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Djurr\.nuget\packages\microsoft.net.test.sdk\16.5.0\build\netcoreapp2.1" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="C:\Users\Djurr\.nuget\packages\microsoft.testplatform.testhost\16.5.0\build\netcoreapp2.1\x64\testhost.dll" t="Include" />
+    <e p="C:\Users\Djurr\.nuget\packages\microsoft.testplatform.testhost\16.5.0\build\netcoreapp2.1\x64\testhost.exe" t="Include" />
+    <e p="C:\Users\Djurr\.nuget\packages\nunit3testadapter\3.16.1\build\netcoreapp2.1\nunit.engine.api.dll" t="Include" />
+    <e p="C:\Users\Djurr\.nuget\packages\nunit3testadapter\3.16.1\build\netcoreapp2.1\nunit.engine.dll" t="Include" />
+    <e p="C:\Users\Djurr\.nuget\packages\nunit3testadapter\3.16.1\build\netcoreapp2.1\NUnit3.TestAdapter.dll" t="Include" />
+    <e p="C:\Users\Djurr\.nuget\packages\nunit3testadapter\3.16.1\build\netcoreapp2.1\NUnit3.TestAdapter.pdb" t="Include" />
+    <e p="C:\Users\Djurr\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Djurr\AppData\Local\JetBrains\Transient\Rider\v202\SolutionCaches\_Huiswerk3.1040627657.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Djurr\RiderProjects\AD\src\Algorithms\Sorters\InsertionSort.cs" t="Include" />
+    <e p="C:\Users\Djurr\RiderProjects\AD\src\Algorithms\Sorters\MergeSort.cs" t="Include" />
+    <e p="C:\Users\Djurr\RiderProjects\AD\src\Algorithms\Sorters\QuickSort.cs" t="Include" />
+    <e p="C:\Users\Djurr\RiderProjects\AD\src\Algorithms\Sorters\ShellSort.cs" t="Include" />
+    <e p="C:\Users\Djurr\RiderProjects\AD\src\Algorithms\Sorters\Sorter.cs" t="Include" />
+    <e p="C:\Users\Djurr\RiderProjects\AD\src\Algorithms\Sorters\SorterBuilder.cs" t="Include" />
+    <e p="C:\Users\Djurr\RiderProjects\AD\src\Homework\Les 3 - Recursie en sorteren" t="IncludeFlat">
+      <e p="Huiswerk3" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Ex1Factorial" t="Include">
+          <e p="Factorial.cs" t="Include" />
+        </e>
+        <e p="Ex2Fibonacci" t="Include">
+          <e p="Fibonacci.cs" t="Include" />
+        </e>
+        <e p="Ex3OmEnOm" t="Include">
+          <e p="OmEnOm.cs" t="Include" />
+        </e>
+        <e p="Ex4Enen" t="Include">
+          <e p="Enen.cs" t="Include" />
+        </e>
+        <e p="Ex6ForwardString" t="Include">
+          <e p="ForwardString.cs" t="Include" />
+        </e>
+        <e p="Huiswerk3.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Huiswerk3.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Sorters" t="Include">
+          <e p="Niet verwijderen. Lees eerst dit.md" t="Include" />
+        </e>
+      </e>
+      <e p="Huiswerk3.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Tests" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Ex1FactorialTests.cs" t="Include" />
+        <e p="Ex2FibonacciTests.cs" t="Include" />
+        <e p="Ex3OmEnOmTests.cs" t="Include" />
+        <e p="Ex4EnenTests.cs" t="Include" />
+        <e p="Ex6ForwardStringTests.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Tests.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="SortingTests.cs" t="Include" />
+        <e p="Tests.csproj" t="IncludeRecursive" />
+      </e>
+    </e>
+    <e p="C:\Users\Djurr\RiderProjects\AD\src\Utils\TestUtils.cs" t="Include" />
+  </component>
+</project>

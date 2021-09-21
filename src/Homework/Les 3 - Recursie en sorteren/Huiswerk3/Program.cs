@@ -24,15 +24,15 @@
             Sorter msort = new MergeSort();
             Sorter ssort = new ShellSort();
             isort.Run();
-            /*msort.Run();*/
+            msort.Run();
             ssort.Run();
-            /*int[] numbers = {100, 1000, 10000};
+            int[] numbers = {100, 1000, 10000};
             foreach (int num in numbers)
             {
                 isort.RunWithTimer(num);
-                /*msort.RunWithTimer(num);#1#
+                msort.RunWithTimer(num);
                 ssort.RunWithTimer(num);
-            }*/
+            }
         }
     }
 }
