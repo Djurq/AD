@@ -12,17 +12,16 @@ namespace AD
         {
             for (int gap = list.Count / 2; gap > 0; gap /= 2)
             {
-                for (int i = gap; i < list.Count; i++)
+                for (int i = 0; i + gap < list.Count; i++)
                 {
-                    int key = list[i - gap];
-                    int j = i;
-                    while (j >= gap && list[j] < key)
+                    int j = i + gap; 
+                    int temp = list[j];
+                    while (j >= gap && temp < list[j - gap])
                     {
-                        int temp = list[j];
                         list[j] = list[j - gap];
-                        list[j - gap] = temp;
                         j -= gap;
                     }
+                    list[j] = temp;
                 }
             }
         }
