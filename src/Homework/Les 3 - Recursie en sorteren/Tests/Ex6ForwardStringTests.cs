@@ -59,7 +59,7 @@ namespace AD
         }
 
         [TestCase(0, "11 10 9 8 7 6 5 4 3 2 1 0")]
-        [TestCase(3, "11 10 9 8 7 6 5 4 3")]
+        [TestCase(4, "11 10 9 8 7 6 5 4")]
         [TestCase(11, "11")]
         [TestCase(12, "")]
         public void BackwardString_Filled(int n, string expected)

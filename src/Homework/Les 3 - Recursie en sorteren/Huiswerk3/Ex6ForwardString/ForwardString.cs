@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace AD
 {
@@ -6,12 +7,24 @@ namespace AD
     {
         public static string ForwardString(List<int> list, int from)
         {
-            throw new System.NotImplementedException();
+            
+            
+            if (list.Count == from || list.Count == 0)
+            {
+                return "";
+            }
+
+            return list[from] + " " + ForwardString(list, from + 1);
         }
         
         public static string BackwardString(List<int> list, int to)
         {
-            throw new System.NotImplementedException();
+            if (to == list.Count || list.Count == 0)
+            {
+                return "";
+            }
+            
+            return BackwardString(list, to + 1) + list[to] + " "  ;
         }
 
         public static void Run()
