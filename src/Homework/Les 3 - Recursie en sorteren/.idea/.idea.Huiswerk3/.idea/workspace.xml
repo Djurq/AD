@@ -23,9 +23,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98c7560e-ef34-45f6-b013-7d24aaa0fd52" name="Default Changelist" comment="shellshort done">
-      <change beforePath="$PROJECT_DIR$/../../Algorithms/Sorters/MergeSort.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Algorithms/Sorters/MergeSort.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Huiswerk3/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Huiswerk3/Program.cs" afterDir="false" />
+    <list default="true" id="98c7560e-ef34-45f6-b013-7d24aaa0fd52" name="Default Changelist" comment="mergesort done">
+      <change beforePath="$PROJECT_DIR$/../../../.idea/.idea.AD.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/.idea.AD.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Algorithms/Sorters/QuickSort.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Algorithms/Sorters/QuickSort.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Huiswerk3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Huiswerk3/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +46,7 @@
         <option value="$PROJECT_DIR$/../../Algorithms/Sorters/ShellSort.cs" />
         <option value="$PROJECT_DIR$/../../Algorithms/Sorters/MergeSort.cs" />
         <option value="$PROJECT_DIR$/Huiswerk3/Program.cs" />
+        <option value="$PROJECT_DIR$/../../Algorithms/Sorters/QuickSort.cs" />
       </list>
     </option>
   </component>
@@ -107,6 +109,11 @@
       <workItem from="1631861820915" duration="112000" />
       <workItem from="1631872796752" duration="11157000" />
       <workItem from="1632135647690" duration="11983000" />
+      <workItem from="1632230319064" duration="312000" />
+      <workItem from="1632400508490" duration="34000" />
+      <workItem from="1632400639938" duration="3011000" />
+      <workItem from="1633338533078" duration="1907000" />
+      <workItem from="1633352235803" duration="1173000" />
     </task>
     <task id="LOCAL-00001" summary="alles tot opdracht 4">
       <created>1632135663374</created>
@@ -122,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632209522368</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="mergesort done">
+      <created>1632230609434</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1632230609434</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,7 +160,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="alles tot opdracht 4" />
     <MESSAGE value="shellshort done" />
-    <option name="LAST_COMMIT_MESSAGE" value="shellshort done" />
+    <MESSAGE value="mergesort done" />
+    <option name="LAST_COMMIT_MESSAGE" value="mergesort done" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1632220969429">
@@ -165,10 +180,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1632220969429" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1632135667117">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1632400529824">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1632135667117" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1632400529824" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1632197823378">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

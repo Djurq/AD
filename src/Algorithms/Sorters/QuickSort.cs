@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Dynamic;
 
 
 namespace AD
@@ -9,8 +11,21 @@ namespace AD
 
         public override void Sort(List<int> list)
         {
-            // Should be implemented in lecture 4!
-            throw new System.NotImplementedException();
+            if (list.Count <= 1)
+            {
+                return;
+            }
+            int pivot = getPivot(list);
+
+        }
+
+        public int getPivot(List<int> list)
+        {
+            int first = list[0];
+            int middle = list[list.Count / 2];
+            int last = list[list.Count - 1];
+
+            return Math.Max(Math.Min(first, middle), Math.Min(Math.Max(first, middle), last));
         }
     }
 }
