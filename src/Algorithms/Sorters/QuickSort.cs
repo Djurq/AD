@@ -11,21 +11,35 @@ namespace AD
 
         public override void Sort(List<int> list)
         {
-            if (list.Count <= 1)
+            if (list.Count > 1)
             {
-                return;
+                List<int> smaller = new List<int>();
+                List<int> same = new List<int>();
+                List<int> larger = new List<int>();
+                int chosenItem = list[list.Count / 2];
+                
+                foreach (int i in list)
+                {
+                    if (i < chosenItem)
+                    {
+                        smaller.Add(i);
+                    }else if (i > chosenItem)
+                    {
+                        larger.Add(i);
+                    }
+                    else
+                    {
+                        same.Add(i);
+                    }
+                    
+                    Sort(smaller);
+                    Sort(larger);
+                    list.Clear();
+                    list.AddRange(smaller);
+                    list.AddRange(same);
+                    list.AddRange(larger);
+                }
             }
-            int pivot = getPivot(list);
-
-        }
-
-        public int getPivot(List<int> list)
-        {
-            int first = list[0];
-            int middle = list[list.Count / 2];
-            int last = list[list.Count - 1];
-
-            return Math.Max(Math.Min(first, middle), Math.Min(Math.Max(first, middle), last));
         }
     }
 }
