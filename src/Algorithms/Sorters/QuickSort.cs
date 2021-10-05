@@ -11,35 +11,38 @@ namespace AD
 
         public override void Sort(List<int> list)
         {
-            if (list.Count > 1)
+            if (list.Count <= 1)
             {
-                List<int> smaller = new List<int>();
-                List<int> same = new List<int>();
-                List<int> larger = new List<int>();
-                int chosenItem = list[list.Count / 2];
-                
-                foreach (int i in list)
+                return;
+            }
+
+            List<int> smaller = new List<int>();
+            List<int> same = new List<int>();
+            List<int> larger = new List<int>();
+            int chosenItem = list[list.Count / 2];
+
+            foreach (int i in list)
+            {
+                if (i < chosenItem)
                 {
-                    if (i < chosenItem)
-                    {
-                        smaller.Add(i);
-                    }else if (i > chosenItem)
-                    {
-                        larger.Add(i);
-                    }
-                    else
-                    {
-                        same.Add(i);
-                    }
-                    
-                    Sort(smaller);
-                    Sort(larger);
-                    list.Clear();
-                    list.AddRange(smaller);
-                    list.AddRange(same);
-                    list.AddRange(larger);
+                    smaller.Add(i);
+                }
+                else if (i > chosenItem)
+                {
+                    larger.Add(i);
+                }
+                else
+                {
+                    same.Add(i);
                 }
             }
+
+            Sort(smaller);
+            Sort(larger);
+            list.Clear();
+            list.AddRange(smaller);
+            list.AddRange(same);
+            list.AddRange(larger);
         }
     }
 }

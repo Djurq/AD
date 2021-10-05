@@ -23,10 +23,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98c7560e-ef34-45f6-b013-7d24aaa0fd52" name="Default Changelist" comment="pivot finder">
-      <change beforePath="$PROJECT_DIR$/../../Algorithms/Sorters/QuickSort.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Algorithms/Sorters/QuickSort.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Huiswerk3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Huiswerk3/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="98c7560e-ef34-45f6-b013-7d24aaa0fd52" name="Default Changelist" comment="quicksort done" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,7 +110,7 @@
       <workItem from="1632400639938" duration="3011000" />
       <workItem from="1633338533078" duration="1907000" />
       <workItem from="1633352235803" duration="1496000" />
-      <workItem from="1633428731414" duration="953000" />
+      <workItem from="1633428731414" duration="974000" />
     </task>
     <task id="LOCAL-00001" summary="alles tot opdracht 4">
       <created>1632135663374</created>
@@ -143,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633353704688</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="quicksort done">
+      <created>1633429702646</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1633429702646</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,7 +173,8 @@
     <MESSAGE value="shellshort done" />
     <MESSAGE value="mergesort done" />
     <MESSAGE value="pivot finder" />
-    <option name="LAST_COMMIT_MESSAGE" value="pivot finder" />
+    <MESSAGE value="quicksort done" />
+    <option name="LAST_COMMIT_MESSAGE" value="quicksort done" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1632220969429">
@@ -188,10 +193,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1632220969429" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1633353714974">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1633429705643">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1633353714974" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1633429705643" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1632197823378">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
