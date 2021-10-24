@@ -1,3 +1,5 @@
+using System;
+
 namespace AD
 {
     public partial class BinaryTree<T> : IBinaryTree<T>
@@ -10,12 +12,12 @@ namespace AD
 
         public BinaryTree()
         {
-            throw new System.NotImplementedException();
+            root = null;
         }
 
         public BinaryTree(T rootItem)
         {
-            throw new System.NotImplementedException();
+            root = new BinaryNode<T>(rootItem , null, null);
         }
 
 
@@ -25,27 +27,57 @@ namespace AD
 
         public BinaryNode<T> GetRoot()
         {
-            throw new System.NotImplementedException();
+            return root;
         }
 
         public int Size()
         {
-            throw new System.NotImplementedException();
+            if (root == null)
+            {
+                return 0;
+            }
+
+            return getSize(root);
+        }
+
+        public int getSize(BinaryNode<T> node)
+        {
+            if (node == null)
+            {
+                return 0;
+            }
+
+            return getSize(node.left) + 1 + getSize(node.right);
         }
 
         public int Height()
         {
-            throw new System.NotImplementedException();
+            if (root == null)
+            {
+                return 0;
+            }
+
+            return getHeight(root);
+        }
+
+        public int getHeight(BinaryNode<T> node)
+        {
+            if (node == null)
+            {
+                return 0;
+            }
+
+            return Math.Max(getHeight(node.left), + getHeight(node.right))+1;
         }
 
         public void MakeEmpty()
         {
-            throw new System.NotImplementedException();
+            root = null;
         }
 
         public bool IsEmpty()
         {
-            throw new System.NotImplementedException();
+            return root == null;
         }
 
         public void Merge(T rootItem, BinaryTree<T> t1, BinaryTree<T> t2)
