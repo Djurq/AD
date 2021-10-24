@@ -54,10 +54,10 @@ namespace AD
         {
             if (root == null)
             {
-                return 0;
+                return -1;
             }
 
-            return getHeight(root);
+            return getHeight(root) -1;
         }
 
         public int getHeight(BinaryNode<T> node)
@@ -82,7 +82,11 @@ namespace AD
 
         public void Merge(T rootItem, BinaryTree<T> t1, BinaryTree<T> t2)
         {
-            throw new System.NotImplementedException();
+            BinaryNode<T> newNode = new BinaryNode<T>();
+            newNode.data = rootItem;
+            root = newNode;
+            root.left = t1.GetRoot();
+            root.right = t2.GetRoot();
         }
 
         public string ToPrefixString()
