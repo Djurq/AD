@@ -91,7 +91,12 @@ namespace AD
 
         public string ToPrefixString()
         {
-            throw new System.NotImplementedException();
+            if (root == null)
+            {
+                return "NIL";
+            }
+            string toReturn = "[" + root.data;
+            
         }
 
         public string ToInfixString()
