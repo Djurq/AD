@@ -1,0 +1,306 @@
+Index: Huiswerk2/Program.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using System;\r\n\r\nnamespace AD\r\n{\r\n    class Program\r\n    {\r\n        static void Ex1ArrayList()\r\n        {\r\n            System.Console.WriteLine(\"\\n=====   Opgave 1 : MyArrayList   =====\\n\");\r\n\r\n            MyArrayList al = new MyArrayList(10);\r\n            System.Console.WriteLine(al);\r\n            al.Add(2);\r\n            al.Add(3);\r\n            al.Add(5);\r\n            System.Console.WriteLine(al);\r\n            System.Console.WriteLine(al.Get(0));\r\n            try\r\n            {\r\n                System.Console.WriteLine(al.Get(3));\r\n            }\r\n            catch (MyArrayListIndexOutOfRangeException e)\r\n            {\r\n                System.Console.WriteLine(e.Message);\r\n            }\r\n            al.Set(2, 4);\r\n            System.Console.WriteLine(al);\r\n\r\n            al.Clear();\r\n            for (int i = 0; i < 10; i++)\r\n            {\r\n                al.Add(i);\r\n            }\r\n            al.Set(9, 2);\r\n            al.Set(7, 2);\r\n            System.Console.WriteLine(al);\r\n            System.Console.WriteLine(al.CountOccurences(2));\r\n        }\r\n\r\n\r\n        static void Ex2LinkedList()\r\n        {\r\n            System.Console.WriteLine(\"\\n=====   Opgave 2 : MyLinkedList   =====\\n\");\r\n\r\n            MyLinkedList<string> ll = new MyLinkedList<string>();\r\n            System.Console.WriteLine(ll);\r\n            ll.AddFirst(\"a\");\r\n            ll.AddFirst(\"b\");\r\n            ll.AddFirst(\"c\");\r\n            ll.Insert(2, \"x\");\r\n            System.Console.WriteLine(ll);\r\n            try\r\n            {\r\n                ll.Insert(4, \"y\");\r\n            }\r\n            catch (MyLinkedListIndexOutOfRangeException e)\r\n            {\r\n                System.Console.WriteLine(e.Message);\r\n            }\r\n\r\n            ll.Clear();\r\n            System.Console.WriteLine(ll);\r\n            ll.AddFirst(\"a\");\r\n            ll.AddFirst(\"b\");\r\n            ll.AddFirst(\"c\");\r\n            ll.Insert(2, \"x\");\r\n            System.Console.WriteLine(ll);\r\n            try\r\n            {\r\n                ll.Insert(5, \"kan niet\");\r\n            }\r\n            catch (MyLinkedListIndexOutOfRangeException e)\r\n            {\r\n                System.Console.WriteLine(\"Exception (zoals verwacht): {0}\", e.Message);\r\n            }\r\n\r\n            ll.Clear();\r\n            ll.AddFirst(\"a\");\r\n            ll.AddFirst(\"b\");\r\n            System.Console.WriteLine(ll.GetFirst());\r\n            ll.RemoveFirst();\r\n            System.Console.WriteLine(ll);\r\n            ll.RemoveFirst();\r\n            System.Console.WriteLine(ll);\r\n        }\r\n\r\n\r\n        static void Ex3Stack()\r\n        {\r\n            System.Console.WriteLine(\"\\n=====   Opgave 3 : MyStack   =====\\n\");\r\n\r\n            MyStack<int> stack = new MyStack<int>();\r\n            stack.Push(1);\r\n            stack.Push(2);\r\n            stack.Push(3);\r\n            System.Console.WriteLine(stack.Top());\r\n            stack.Pop();\r\n            stack.Pop();\r\n            stack.Pop();\r\n            try\r\n            {\r\n                stack.Pop();\r\n            }\r\n            catch (MyStackEmptyException e)\r\n            {\r\n                System.Console.WriteLine(e.Message);\r\n            }\r\n        }\r\n\r\n\r\n        static void Ex4BracketChecker()\r\n        {\r\n            System.Console.WriteLine(\"\\n=====   Opgave 4 : BracketChecker   =====\\n\");\r\n\r\n            System.Console.WriteLine(BracketChecker.CheckBrackets(\"\"));\r\n            System.Console.WriteLine(BracketChecker.CheckBrackets(\"()\"));\r\n            System.Console.WriteLine(BracketChecker.CheckBrackets(\"())\"));\r\n\r\n            System.Console.WriteLine(\"\\n=====   Opgave 4 : BracketChecker2   =====\\n\");\r\n\r\n            System.Console.WriteLine(BracketChecker.CheckBrackets2(\"(())([][][][[]]{})\"));\r\n            System.Console.WriteLine(BracketChecker.CheckBrackets2(\"(){}[][\"));\r\n            System.Console.WriteLine(BracketChecker.CheckBrackets2(\"([)]\"));\r\n            System.Console.WriteLine(BracketChecker.CheckBrackets2(\"([][]\"));\r\n        }\r\n\r\n\r\n        static void Ex5Queue()\r\n        {\r\n            System.Console.WriteLine(\"\\n=====   Opgave 5 : MyQueue   =====\\n\");\r\n\r\n            MyQueue<int> queue = new MyQueue<int>();\r\n            queue.Enqueue(1);\r\n            queue.Enqueue(2);\r\n            queue.Enqueue(3);\r\n            System.Console.WriteLine(queue.Dequeue());\r\n            System.Console.WriteLine(queue.GetFront());\r\n            System.Console.WriteLine(queue.Dequeue());\r\n            System.Console.WriteLine(queue.GetFront());\r\n            queue.Dequeue();\r\n            try\r\n            {\r\n                System.Console.WriteLine(queue.GetFront());\r\n            }\r\n            catch (MyQueueEmptyException e)\r\n            {\r\n                System.Console.WriteLine(e.Message);\r\n            }\r\n        }\r\n\r\n\r\n        static void Main(string[] args)\r\n        {\r\n            int[] m = new int[10];\r\n            //Ex1ArrayList();\r\n            //Ex2LinkedList();\r\n            //Ex3Stack();\r\n            //Ex4BracketChecker();\r\n            //Ex5Queue();\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Huiswerk2/Program.cs b/Huiswerk2/Program.cs
+--- a/Huiswerk2/Program.cs	
++++ b/Huiswerk2/Program.cs	
+@@ -151,7 +151,13 @@
+ 
+         static void Main(string[] args)
+         {
+-            int[] m = new int[10];
++            IMyArrayList lst = DSBuilder.CreateMyArrayList5();
++            String expected = "[3]";
++
++            // Act
++            lst.Add(3);
++            String actual = lst.ToString();
++            Console.WriteLine(actual);
+             //Ex1ArrayList();
+             //Ex2LinkedList();
+             //Ex3Stack();
+Index: ../../Datastructures/MyArrayList/MyArrayListTests.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using NUnit.Framework;\r\nusing System;\r\n\r\n\r\nnamespace AD\r\n{\r\n    [TestFixture]\r\n    public partial class MyArrayListTests\r\n    {\r\n        [Test]\r\n        public void MyArrayList_1_Constructor5_1_CapacityEquals5()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            int expected = 5;\r\n\r\n            // Act\r\n            int actual = lst.Capacity();\r\n\r\n            // Assert\r\n            Assert.AreEqual(expected, actual);\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_1_Constructor5_2_SizeEquals0()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            int expected = 0;\r\n\r\n            // Act\r\n            int actual = lst.Size();\r\n\r\n            // Assert\r\n            Assert.AreEqual(expected, actual);\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_2_Add_1_CapacityEquals5()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            int expected = 5;\r\n            lst.Add(3);\r\n\r\n            // Act\r\n            int actual = lst.Capacity();\r\n\r\n            // Assert\r\n            Assert.AreEqual(expected, actual);\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_2_Add_2_SizeEquals1()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            int expected = 1;\r\n            lst.Add(3);\r\n\r\n            // Act\r\n            int actual = lst.Size();\r\n\r\n            // Assert\r\n            Assert.AreEqual(expected, actual);\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_2_Add_3_CapacityAlmostFull()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            int expected = 5;\r\n            lst.Add(3);\r\n            lst.Add(3);\r\n            lst.Add(3);\r\n            lst.Add(3);\r\n            lst.Add(3);\r\n\r\n            // Act\r\n            int actual = lst.Size();\r\n\r\n            // Assert\r\n            Assert.AreEqual(expected, actual);\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_2_Add_4_CapacityFull()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            lst.Add(3);\r\n            lst.Add(3);\r\n            lst.Add(3);\r\n            lst.Add(3);\r\n            lst.Add(3);\r\n\r\n            // Act & Assert\r\n            Assert.Throws(typeof(MyArrayListFullException), () => lst.Add(3));\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_3_Get_1_GetReturnsProperResult()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            int expected = 2;\r\n            lst.Add(1);\r\n            lst.Add(2);\r\n            lst.Add(3);\r\n            lst.Add(4);\r\n\r\n            // Act\r\n            int actual = lst.Get(1);\r\n\r\n            // Assert\r\n            Assert.AreEqual(expected, actual);\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_3_Get_2_ThrowsExceptionOnEmptyList()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n\r\n            // Act & Assert\r\n            Assert.Throws(typeof(MyArrayListIndexOutOfRangeException), () => lst.Get(0));\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_3_Get_3_ThrowsExceptionOnTooLowIndex()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            lst.Add(1);\r\n            lst.Add(2);\r\n\r\n            // Act & Assert\r\n            Assert.Throws(typeof(MyArrayListIndexOutOfRangeException), () => lst.Get(-1));\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_3_Get_4_ThrowsExceptionOnTooHighIndex()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            lst.Add(1);\r\n            lst.Add(2);\r\n\r\n            // Act & Assert\r\n            Assert.Throws(typeof(MyArrayListIndexOutOfRangeException), () => lst.Get(2));\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_4_Set_1_GetReturnsProperResult()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            int expected = 7;\r\n            lst.Add(1);\r\n            lst.Add(2);\r\n            lst.Add(3);\r\n            lst.Add(4);\r\n\r\n            // Act\r\n            lst.Set(1, 7);\r\n            int actual = lst.Get(1);\r\n\r\n            // Assert\r\n            Assert.AreEqual(expected, actual);\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_4_Set_2_ThrowsExceptionOnEmptyList()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n\r\n            // Act & Assert\r\n            Assert.Throws(typeof(MyArrayListIndexOutOfRangeException), () => lst.Set(0, 2));\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_4_Set_3_ThrowsExceptionOnTooLowIndex()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n\r\n            // Act\r\n            lst.Add(1);\r\n            lst.Add(2);\r\n            lst.Add(3);\r\n            lst.Add(4);\r\n\r\n            // Assert\r\n            Assert.Throws(typeof(MyArrayListIndexOutOfRangeException), () => lst.Set(-1, 2));\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_4_Set_4_ThrowsExceptionOnTooHighIndex()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n\r\n            // Act\r\n            lst.Add(1);\r\n            lst.Add(2);\r\n            lst.Add(3);\r\n            lst.Add(4);\r\n            Assert.Throws(typeof(MyArrayListIndexOutOfRangeException), () => lst.Set(4, 2));\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_5_Clear_1_CapacityRemainsSame()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            int expected = 5;\r\n            lst.Add(1);\r\n            lst.Add(2);\r\n            lst.Add(3);\r\n            lst.Add(4);\r\n\r\n            // Act\r\n            lst.Clear();\r\n            int actual = lst.Capacity();\r\n\r\n            // Assert\r\n            Assert.AreEqual(expected, actual);\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_5_Clear_2_SizeEquals0()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            int expected = 0;\r\n            lst.Add(1);\r\n            lst.Add(2);\r\n            lst.Add(3);\r\n            lst.Add(4);\r\n\r\n            // Act\r\n            lst.Clear();\r\n            int actual = lst.Size();\r\n\r\n            // Assert\r\n            Assert.AreEqual(expected, actual);\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_5_Clear_3_GetThrowsExceptionAfterClear()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            lst.Add(1);\r\n            lst.Add(2);\r\n            lst.Clear();\r\n\r\n            // Act & Assert\r\n            Assert.Throws(typeof(MyArrayListIndexOutOfRangeException), () => lst.Get(0));\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_5_Clear_4_SetThrowsExceptionAfterClear()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            lst.Add(1);\r\n            lst.Add(2);\r\n            lst.Add(3);\r\n            lst.Add(4);\r\n            lst.Clear();\r\n\r\n            // Act & Assert\r\n            Assert.Throws(typeof(MyArrayListIndexOutOfRangeException), () => lst.Set(0, 2));\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_6_ToString_1_OnEmptyList()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            String expected = \"NIL\";\r\n\r\n            // Act\r\n            String actual = lst.ToString();\r\n\r\n            // Assert\r\n            Assert.AreEqual(expected, actual);\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_6_ToString_2_OnSingleElement()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            String expected = \"[3]\";\r\n\r\n            // Act\r\n            lst.Add(3);\r\n            String actual = lst.ToString();\r\n\r\n            // Assert\r\n            Assert.AreEqual(expected, actual);\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_6_ToString_3_OnFullList()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            String expected = \"[1,2,3,4,5]\";\r\n\r\n            // Act\r\n            lst.Add(1);\r\n            lst.Add(2);\r\n            lst.Add(3);\r\n            lst.Add(4);\r\n            lst.Add(5);\r\n            String actual = lst.ToString();\r\n\r\n            // Assert\r\n            Assert.AreEqual(expected, actual);\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_6_ToString_4_AfterSet()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            String expected = \"[1,2,7,4,5]\";\r\n\r\n            // Act\r\n            lst.Add(1);\r\n            lst.Add(2);\r\n            lst.Add(3);\r\n            lst.Add(4);\r\n            lst.Add(5);\r\n            lst.Set(2, 7);\r\n            String actual = lst.ToString();\r\n\r\n            // Assert\r\n            Assert.AreEqual(expected, actual);\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_6_ToString_5_AfterClear()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            String expected = \"NIL\";\r\n\r\n            // Act\r\n            lst.Add(1);\r\n            lst.Add(2);\r\n            lst.Add(3);\r\n            lst.Add(4);\r\n            lst.Add(5);\r\n            lst.Clear();\r\n            String actual = lst.ToString();\r\n\r\n            // Assert\r\n            Assert.AreEqual(expected, actual);\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_7_CountOccurences_1_OnEmptyList()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            int expected = 0;\r\n\r\n            // Act\r\n            int actual = lst.CountOccurences(3);\r\n\r\n            // Assert\r\n            Assert.AreEqual(expected, actual);\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_7_CountOccurences_2_NoOccurences()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            int expected = 0;\r\n\r\n            // Act\r\n            lst.Add(1);\r\n            lst.Add(2);\r\n            lst.Add(3);\r\n            lst.Add(4);\r\n            lst.Add(5);\r\n            int actual = lst.CountOccurences(6);\r\n\r\n            // Assert\r\n            Assert.AreEqual(expected, actual);\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_7_CountOccurences_3_OneOccurence()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            int expected = 1;\r\n\r\n            // Act\r\n            lst.Add(1);\r\n            lst.Add(2);\r\n            lst.Add(3);\r\n            lst.Add(4);\r\n            lst.Add(5);\r\n            int actual = lst.CountOccurences(3);\r\n\r\n            // Assert\r\n            Assert.AreEqual(expected, actual);\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_7_CountOccurences_4_MoreOccurences()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            int expected = 3;\r\n\r\n            // Act\r\n            lst.Add(3);\r\n            lst.Add(2);\r\n            lst.Add(3);\r\n            lst.Add(4);\r\n            lst.Add(3);\r\n            int actual = lst.CountOccurences(3);\r\n\r\n            // Assert\r\n            Assert.AreEqual(expected, actual);\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_8_CountOccurences_5_ReturnsProperResultAfterClean()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            int expected = 0;\r\n\r\n            // Act\r\n            lst.Add(3);\r\n            lst.Add(2);\r\n            lst.Add(3);\r\n            lst.Add(4);\r\n            lst.Add(3);\r\n            lst.Clear();\r\n            int actual = lst.CountOccurences(3);\r\n\r\n            // Assert\r\n            Assert.AreEqual(expected, actual);\r\n        }\r\n\r\n        [Test]\r\n        public void MyArrayList_8_CountOccurences_5_ReturnsProperResultAfterCleanAndAdd()\r\n        {\r\n            // Arrange\r\n            IMyArrayList lst = DSBuilder.CreateMyArrayList5();\r\n            int expected = 1;\r\n\r\n            // Act\r\n            lst.Add(3);\r\n            lst.Add(2);\r\n            lst.Add(3);\r\n            lst.Add(4);\r\n            lst.Add(3);\r\n            lst.Clear();\r\n            lst.Add(3);\r\n            int actual = lst.CountOccurences(3);\r\n\r\n            // Assert\r\n            Assert.AreEqual(expected, actual);\r\n        }\r\n\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../Datastructures/MyArrayList/MyArrayListTests.cs b/../../Datastructures/MyArrayList/MyArrayListTests.cs
+--- a/../../Datastructures/MyArrayList/MyArrayListTests.cs	
++++ b/../../Datastructures/MyArrayList/MyArrayListTests.cs	
+@@ -158,7 +158,7 @@
+             IMyArrayList lst = DSBuilder.CreateMyArrayList5();
+             int expected = 7;
+             lst.Add(1);
+-            lst.Add(2);
++            lst.Add(7);
+             lst.Add(3);
+             lst.Add(4);
+ 
+Index: ../../Datastructures/MyArrayList/MyArrayList.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>namespace AD\r\n{\r\n    public partial class MyArrayList : IMyArrayList\r\n    {\r\n        private int[] data;\r\n        private int size;\r\n        \r\n        public MyArrayList(int capacity)\r\n        {\r\n            data = new int[capacity];\r\n        }\r\n\r\n        public void Add(int n)\r\n        {\r\n            data[size] = n;\r\n            size++;\r\n        }\r\n\r\n        public int Get(int index)\r\n        {\r\n            return data[index];\r\n        }\r\n\r\n        public void Set(int index, int n)\r\n        {\r\n            data[index] = n;\r\n        }\r\n\r\n        public int Capacity()\r\n        {\r\n            return data.Length;\r\n        }\r\n\r\n        public int Size()\r\n        {\r\n            return size;\r\n        }\r\n\r\n        public void Clear()\r\n        {\r\n            for (var i = 0; i < data.Length; i++)\r\n            {\r\n                data[i] = 0;\r\n            }\r\n\r\n            size = 0;\r\n        }\r\n\r\n        public int CountOccurences(int n)\r\n        {\r\n            int Occurences = 0;\r\n            for (int i = 0; i < data.Length; i++)\r\n            {\r\n                if (Get(i) == n)\r\n                {\r\n                    Occurences++;\r\n                }\r\n            }\r\n\r\n            return Occurences;\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../Datastructures/MyArrayList/MyArrayList.cs b/../../Datastructures/MyArrayList/MyArrayList.cs
+--- a/../../Datastructures/MyArrayList/MyArrayList.cs	
++++ b/../../Datastructures/MyArrayList/MyArrayList.cs	
+@@ -4,7 +4,7 @@
+     {
+         private int[] data;
+         private int size;
+-        
++
+         public MyArrayList(int capacity)
+         {
+             data = new int[capacity];
+@@ -12,18 +12,37 @@
+ 
+         public void Add(int n)
+         {
+-            data[size] = n;
+-            size++;
++            if (size < Capacity())
++            {
++                data[size] = n;
++                size++;
++            }
++            else
++            {
++                throw new MyArrayListFullException();
++            }
+         }
+ 
+         public int Get(int index)
+         {
+-            return data[index];
+-        }
++            if (size > 0 && index >= 0 && index < size)
++            {
++                return data[index];
++            }
+ 
++            throw new MyArrayListIndexOutOfRangeException();
++        }
++
+         public void Set(int index, int n)
+         {
+-            data[index] = n;
++            if (size >= 1 && index >= 0 && index < Capacity() && index < size)
++            {
++                data[index] = n;
++            }
++            else
++            {
++                throw new MyArrayListIndexOutOfRangeException();
++            }
+         }
+ 
+         public int Capacity()
+@@ -38,20 +57,15 @@
+ 
+         public void Clear()
+         {
+-            for (var i = 0; i < data.Length; i++)
+-            {
+-                data[i] = 0;
+-            }
+-
+             size = 0;
+         }
+ 
+         public int CountOccurences(int n)
+         {
+             int Occurences = 0;
+-            for (int i = 0; i < data.Length; i++)
++            for (int i = 0; i < size; i++)
+             {
+-                if (Get(i) == n)
++                if (data[i] == n)
+                 {
+                     Occurences++;
+                 }
+@@ -59,5 +73,30 @@
+ 
+             return Occurences;
+         }
+-    }
+-}
++
++        public override string ToString()
++        {
++            if (size == 0)
++            {
++                return "NIL";
++            }
++            else
++            {
++                string numbers = "[";
++                for (var i = 0; i < size; i++)
++                {
++                    numbers += data[i];
++                    if (size > 1 && i < Capacity() -1)
++                    {
++                        numbers += ",";
++                    }
++                }
++
++                numbers += "]";
++                return numbers;
++            }
++
++            return base.ToString();
++        }
++    }
++}
+\ No newline at end of file
+Index: ../../../.idea/.idea.ad2.dir/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"7ebd0785-f7e6-473b-b35d-bf4eb6086599\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/.idea.ad2.dir/.idea/encodings.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/.idea.ad2.dir/.idea/indexLayout.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/.idea.ad2.dir/.idea/projectSettingsUpdater.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/.idea.ad2.dir/.idea/vcs.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/.idea/.idea.Huiswerk2/.idea/.name\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/.idea/.idea.Huiswerk2/.idea/encodings.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/.idea/.idea.Huiswerk2/.idea/indexLayout.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/.idea/.idea.Huiswerk2/.idea/projectSettingsUpdater.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/.idea/.idea.Huiswerk2/.idea/vcs.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/.idea/.idea.Huiswerk2/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Datastructures/MyArrayList/MyArrayList.cs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Datastructures/MyArrayList/MyArrayList.cs\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/Huiswerk2/Program.cs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/Huiswerk2/Program.cs\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/Tests/Tests.csproj\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/Tests/Tests.csproj\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1y3Fk1JmLzCkg44rdVrOFmc4Q6O\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"ASKED_ADD_EXTERNAL_FILES\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"7ebd0785-f7e6-473b-b35d-bf4eb6086599\" name=\"Changes\" comment=\"\" />\r\n      <created>1631472503774</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1631472503774</updated>\r\n      <workItem from=\"1631472505327\" duration=\"677000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"UnityCheckinConfiguration\" checkUnsavedScenes=\"true\" />\r\n  <component name=\"UnityProjectConfiguration\" hasMinimizedUI=\"null\" />\r\n  <component name=\"UnityUnitTestConfiguration\" currentTestLauncher=\"NUnit\" />\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <option name=\"CLEAR_INITIAL_COMMIT_MESSAGE\" value=\"true\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../../.idea/.idea.ad2.dir/.idea/workspace.xml b/../../../.idea/.idea.ad2.dir/.idea/workspace.xml
+--- a/../../../.idea/.idea.ad2.dir/.idea/workspace.xml	
++++ b/../../../.idea/.idea.ad2.dir/.idea/workspace.xml	
+@@ -2,19 +2,7 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="7ebd0785-f7e6-473b-b35d-bf4eb6086599" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ad2.dir/.idea/encodings.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ad2.dir/.idea/indexLayout.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ad2.dir/.idea/projectSettingsUpdater.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ad2.dir/.idea/vcs.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/.idea/.idea.Huiswerk2/.idea/.name" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/.idea/.idea.Huiswerk2/.idea/encodings.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/.idea/.idea.Huiswerk2/.idea/indexLayout.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/.idea/.idea.Huiswerk2/.idea/projectSettingsUpdater.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/.idea/.idea.Huiswerk2/.idea/vcs.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/.idea/.idea.Huiswerk2/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Datastructures/MyArrayList/MyArrayList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Datastructures/MyArrayList/MyArrayList.cs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/Huiswerk2/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/Huiswerk2/Program.cs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/Tests/Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homework/Les 2 - Basis datastructuren/Tests/Tests.csproj" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.ad2.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ad2.dir/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -23,6 +11,14 @@
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="GitSEFilterConfiguration">
++    <file-type-list>
++      <filtered-out-file-type name="LOCAL_BRANCH" />
++      <filtered-out-file-type name="REMOTE_BRANCH" />
++      <filtered-out-file-type name="TAG" />
++      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
++    </file-type-list>
+   </component>
+   <component name="ProjectId" id="1y3Fk1JmLzCkg44rdVrOFmc4Q6O" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+@@ -48,14 +44,24 @@
+       <option name="presentableId" value="Default" />
+       <updated>1631472503774</updated>
+       <workItem from="1631472505327" duration="677000" />
++      <workItem from="1631475573186" duration="379000" />
++      <workItem from="1631476238983" duration="75000" />
+     </task>
++    <task id="LOCAL-00001" summary="init">
++      <created>1631475870132</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1631475870132</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+   </component>
+   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
++  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+   <component name="Vcs.Log.Tabs.Properties">
+     <option name="TAB_STATES">
+@@ -67,9 +73,12 @@
+         </entry>
+       </map>
+     </option>
++    <option name="oldMeFiltersMigrated" value="true" />
+   </component>
+   <component name="VcsManagerConfiguration">
+     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
++    <MESSAGE value="init" />
++    <option name="LAST_COMMIT_MESSAGE" value="init" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/.idea.Huiswerk2/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoGeneratedRunConfigurationManager\">\r\n    <projectFile>Huiswerk2/Huiswerk2.csproj</projectFile>\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"1ebcc7fb-ba31-4c52-ae66-ce6151112b6c\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/../../../.idea/.idea.ad2.dir/.idea/encodings.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../../../.idea/.idea.ad2.dir/.idea/indexLayout.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../../../.idea/.idea.ad2.dir/.idea/projectSettingsUpdater.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../../../.idea/.idea.ad2.dir/.idea/vcs.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/.idea.Huiswerk2/.idea/.name\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/.idea.Huiswerk2/.idea/encodings.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/.idea.Huiswerk2/.idea/indexLayout.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/.idea.Huiswerk2/.idea/projectSettingsUpdater.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/.idea.Huiswerk2/.idea/vcs.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../../Datastructures/MyArrayList/MyArrayList.cs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../../Datastructures/MyArrayList/MyArrayList.cs\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Huiswerk2/Program.cs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Huiswerk2/Program.cs\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Tests/Tests.csproj\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Tests/Tests.csproj\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/../../..\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1y3FpQW03eRHYn6tCrZr2c2ssDT\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"ASKED_SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"RiderNuGetOptionsPageId\" />\r\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\r\n  </component>\r\n  <component name=\"RunManager\" selected=\".NET Project.Huiswerk2\">\r\n    <configuration name=\"Huiswerk2\" type=\"DotNetProject\" factoryName=\".NET Project\">\r\n      <option name=\"EXE_PATH\" value=\"\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <option name=\"USE_MONO\" value=\"0\" />\r\n      <option name=\"RUNTIME_ARGUMENTS\" value=\"\" />\r\n      <option name=\"PROJECT_PATH\" value=\"$PROJECT_DIR$/Huiswerk2/Huiswerk2.csproj\" />\r\n      <option name=\"PROJECT_EXE_PATH_TRACKING\" value=\"1\" />\r\n      <option name=\"PROJECT_ARGUMENTS_TRACKING\" value=\"1\" />\r\n      <option name=\"PROJECT_WORKING_DIRECTORY_TRACKING\" value=\"1\" />\r\n      <option name=\"PROJECT_KIND\" value=\"DotNetCore\" />\r\n      <option name=\"PROJECT_TFM\" value=\"\" />\r\n      <method v=\"2\">\r\n        <option name=\"Build\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"1ebcc7fb-ba31-4c52-ae66-ce6151112b6c\" name=\"Changes\" comment=\"\" />\r\n      <created>1631472547219</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1631472547219</updated>\r\n      <workItem from=\"1631472550403\" duration=\"2912000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"UnityCheckinConfiguration\" checkUnsavedScenes=\"true\" />\r\n  <component name=\"UnityProjectConfiguration\" hasMinimizedUI=\"null\" />\r\n  <component name=\"UnityUnitTestConfiguration\" currentTestLauncher=\"NUnit\" />\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"CLEAR_INITIAL_COMMIT_MESSAGE\" value=\"true\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.idea.Huiswerk2/.idea/workspace.xml b/.idea/.idea.Huiswerk2/.idea/workspace.xml
+--- a/.idea/.idea.Huiswerk2/.idea/workspace.xml	
++++ b/.idea/.idea.Huiswerk2/.idea/workspace.xml	
+@@ -5,18 +5,11 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="1ebcc7fb-ba31-4c52-ae66-ce6151112b6c" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/../../../.idea/.idea.ad2.dir/.idea/encodings.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../../../.idea/.idea.ad2.dir/.idea/indexLayout.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../../../.idea/.idea.ad2.dir/.idea/projectSettingsUpdater.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../../../.idea/.idea.ad2.dir/.idea/vcs.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Huiswerk2/.idea/.name" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Huiswerk2/.idea/encodings.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Huiswerk2/.idea/indexLayout.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Huiswerk2/.idea/projectSettingsUpdater.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Huiswerk2/.idea/vcs.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../../../.idea/.idea.ad2.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/.idea.ad2.dir/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../../Datastructures/MyArrayList/MyArrayList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Datastructures/MyArrayList/MyArrayList.cs" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../../Datastructures/MyArrayList/MyArrayListTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Datastructures/MyArrayList/MyArrayListTests.cs" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.Huiswerk2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Huiswerk2/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Huiswerk2/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Huiswerk2/Program.cs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Tests/Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Tests.csproj" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -71,6 +64,7 @@
+       <option name="presentableId" value="Default" />
+       <updated>1631472547219</updated>
+       <workItem from="1631472550403" duration="2912000" />
++      <workItem from="1631476320450" duration="3565000" />
+     </task>
+     <servers />
+   </component>
+@@ -78,7 +72,7 @@
+     <option name="version" value="3" />
+   </component>
+   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
++  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+   <component name="Vcs.Log.Tabs.Properties">
+     <option name="TAB_STATES">
+@@ -90,6 +84,7 @@
+         </entry>
+       </map>
+     </option>
++    <option name="oldMeFiltersMigrated" value="true" />
+   </component>
+   <component name="VcsManagerConfiguration">
+     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
