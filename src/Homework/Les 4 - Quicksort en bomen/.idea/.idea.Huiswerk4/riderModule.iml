@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="RIDER_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.5.0/build/netcoreapp2.1" />
+    <content url="file://$USER_HOME$/.nuget/packages/microsoft.testplatform.testhost/16.5.0/build/netcoreapp2.1/x64/testhost.dll" />
+    <content url="file://$USER_HOME$/.nuget/packages/microsoft.testplatform.testhost/16.5.0/build/netcoreapp2.1/x64/testhost.exe" />
+    <content url="file://$USER_HOME$/.nuget/packages/nunit3testadapter/3.16.1/build/netcoreapp2.1/NUnit3.TestAdapter.dll" />
+    <content url="file://$USER_HOME$/.nuget/packages/nunit3testadapter/3.16.1/build/netcoreapp2.1/NUnit3.TestAdapter.pdb" />
+    <content url="file://$USER_HOME$/.nuget/packages/nunit3testadapter/3.16.1/build/netcoreapp2.1/nunit.engine.api.dll" />
+    <content url="file://$USER_HOME$/.nuget/packages/nunit3testadapter/3.16.1/build/netcoreapp2.1/nunit.engine.dll" />
+    <content url="file://$MODULE_DIR$/../../../../Algorithms/Sorters/InsertionSort.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Algorithms/Sorters/MergeSort.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Algorithms/Sorters/QuickSort.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Algorithms/Sorters/ShellSort.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Algorithms/Sorters/Sorter.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Algorithms/Sorters/SorterBuilder.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/BinaryTree/BinaryNode.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/BinaryTree/BinaryTree.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/BinaryTree/BinaryTreeBuilder.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/BinaryTree/BinaryTreeTests.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/BinaryTree/IBinaryTree.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/FirstChildNextSibling/FirstChildNextSibling.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/FirstChildNextSibling/FirstChildNextSiblingBuilder.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/FirstChildNextSibling/FirstChildNextSiblingNode.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/FirstChildNextSibling/FirstChildNextSiblingTests.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/FirstChildNextSibling/IFirstChildNextSibling.cs" />
+    <content url="file://$MODULE_DIR$/../../../../Datastructures/FirstChildNextSibling/IFirstChildNextSiblingNode.cs" />
+    <content url="file://$MODULE_DIR$/../.." />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
