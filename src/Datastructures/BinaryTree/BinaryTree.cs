@@ -17,7 +17,7 @@ namespace AD
 
         public BinaryTree(T rootItem)
         {
-            root = new BinaryNode<T>(rootItem , null, null);
+            root = new BinaryNode<T>(rootItem, null, null);
         }
 
 
@@ -57,7 +57,7 @@ namespace AD
                 return -1;
             }
 
-            return getHeight(root) -1;
+            return getHeight(root) - 1;
         }
 
         public int getHeight(BinaryNode<T> node)
@@ -67,7 +67,7 @@ namespace AD
                 return 0;
             }
 
-            return Math.Max(getHeight(node.left), + getHeight(node.right))+1;
+            return Math.Max(getHeight(node.left), +getHeight(node.right)) + 1;
         }
 
         public void MakeEmpty()
@@ -95,18 +95,67 @@ namespace AD
             {
                 return "NIL";
             }
-            string toReturn = "[" + root.data;
-            
+
+            return toPrefix(root).Trim();
+        }
+
+        public string toPrefix(BinaryNode<T> root)
+        {
+            if (root != null)
+            {
+                string toReturn = "";
+                toReturn += "[ " + root.data + " " + toPrefix(root.left) + toPrefix(root.right);
+                toReturn += "] ";
+                return toReturn;
+            }
+
+            return "NIL ";
         }
 
         public string ToInfixString()
         {
-            throw new System.NotImplementedException();
+            if (root == null)
+            {
+                return "NIL";
+            }
+
+            return toInfix(root).Trim();
+        }
+
+        public string toInfix(BinaryNode<T> root)
+        {
+            if (root == null)
+            {
+                return "NIL ";
+            }
+
+            string toReturn = "";
+            toReturn += "[ " + toInfix(root.left) + root.data + " " + toInfix(root.right);
+            toReturn += "] ";
+            return toReturn;
         }
 
         public string ToPostfixString()
         {
-            throw new System.NotImplementedException();
+            if (root == null)
+            {
+                return "NIL";
+            }
+
+            return toPostfix(root).Trim();
+        }
+
+        public string toPostfix(BinaryNode<T> root)
+        {
+            if (root != null)
+            {
+                string toReturn = "";
+                toReturn += "[ " + toPostfix(root.left) + toPostfix(root.right) + root.data + " ";
+                toReturn += "] ";
+                return toReturn;
+            }
+
+            return "NIL ";
         }
 
 
