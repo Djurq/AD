@@ -23,12 +23,12 @@ namespace AD
         //----------------------------------------------------------------------
         public int Size()
         {
-            throw new System.NotImplementedException();
+            return size;
         }
 
         public void Clear()
         {
-            throw new System.NotImplementedException();
+            size = 0;
         }
 
         public void Add(T x)

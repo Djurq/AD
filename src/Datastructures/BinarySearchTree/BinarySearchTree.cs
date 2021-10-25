@@ -40,6 +40,7 @@ namespace AD
             {
                 throw new BinarySearchTreeEmptyException();
             }
+
             return findmin(root);
         }
 
@@ -59,21 +60,34 @@ namespace AD
             {
                 throw new BinarySearchTreeEmptyException();
             }
-            BinaryNode<T> newTreeRemovedMin = removeMin(root);
-            root = newTreeRemovedMin;
-        }
 
-        public BinaryNode<T> removeMin(BinaryNode<T> root)
-        {
-            if (root.left != null)
+            if (root.left == null)
             {
-                return removeMin(root.left);
+                root = null;
+                return;
             }
 
-            BinaryNode<T> newTree = root;
-            newTree.data = default(T);
-            return newTree;
+            removeMin(root, root);
         }
+
+        public void removeMin(BinaryNode<T> rootLeft, BinaryNode<T> parentNode)
+        {
+            if (rootLeft.left == null)
+            {
+                if (rootLeft.right != null)
+                {
+                    parentNode.left = rootLeft.right;
+                }
+                else
+                {
+                    parentNode.left = null;
+                }
+                return;
+            }
+
+            removeMin(rootLeft.left, rootLeft);
+        }
+
 
         public void Remove(T x)
         {
