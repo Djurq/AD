@@ -15,7 +15,7 @@ namespace AD
         //----------------------------------------------------------------------
         public PriorityQueue()
         {
-            throw new System.NotImplementedException();
+            array = new T[1];
         }
 
         //----------------------------------------------------------------------
@@ -33,13 +33,41 @@ namespace AD
 
         public void Add(T x)
         {
-            throw new System.NotImplementedException();
+            if (size + 1 >= array.Length)
+            {
+                size *= 2;
+            }
+
+            int hole = size++;
+            array[0] = x;
+            for (;compare(x, array[hole / 2]) < 0; hole /= 2)
+            {
+                array[hole] = array[hole / 2];
+            }
+
+            array[hole] = x;
+        }
+
+        public int compare(T x, T arrayPosition)
+        {
+            return Convert.ToInt32(arrayPosition) - Convert.ToInt32(x);
         }
 
         // Removes the smallest item in the priority queue
         public T Remove()
         {
             throw new System.NotImplementedException();
+        }
+
+        public override string ToString()
+        {
+            string toReturn = "";
+            for (var i = 0; i < size; i++)
+            {
+                toReturn += array[i] + " ";
+            }
+
+            return toReturn.Trim();
         }
 
 
