@@ -17,7 +17,7 @@ namespace AD
 
         public Graph()
         {
-            throw new System.NotImplementedException();
+            vertexMap = new Dictionary<string, Vertex>();
         }
 
 
@@ -32,7 +32,9 @@ namespace AD
         /// <param name="name">The name of the new vertex</param>
         public void AddVertex(string name)
         {
-            throw new System.NotImplementedException();
+            if (vertexMap.ContainsKey(name)) return;
+            Vertex newVertex = new Vertex(name);
+            vertexMap.Add(name, newVertex);
         }
 
 
@@ -44,7 +46,13 @@ namespace AD
         /// <returns>The vertex withe the given name</returns>
         public Vertex GetVertex(string name)
         {
-            throw new System.NotImplementedException();
+            foreach (var vertex in vertexMap.Where(vertex => vertex.Key.Equals(name)))
+            {
+                return vertex.Value;
+            }
+            Vertex nonexistingVertex = new Vertex(name);
+            AddVertex(name);
+            return nonexistingVertex;
         }
 
 
@@ -58,7 +66,10 @@ namespace AD
         /// <param name="cost">cost of the edge</param>
         public void AddEdge(string source, string dest, double cost = 1)
         {
-            throw new System.NotImplementedException();
+            Vertex w = GetVertex(dest);
+            AddVertex(source);
+            AddVertex(dest); 
+            vertexMap[source].adj.AddFirst(new Edge(w, cost));
         }
 
 
@@ -68,7 +79,10 @@ namespace AD
         /// </summary>
         public void ClearAll()
         {
-            throw new System.NotImplementedException();
+            foreach (var vertex in vertexMap)
+            {
+                vertex.Value.Reset();
+            }
         }
 
         /// <summary>
@@ -101,7 +115,13 @@ namespace AD
         /// <returns>The string representation of this Graph instance</returns>
         public override string ToString()
         {
-            throw new System.NotImplementedException();
+            string graphString = "";
+            foreach (string key in vertexMap.Keys.OrderBy(x => x))
+            {
+                graphString += vertexMap[key].ToString() + "\n";
+            }
+
+            return graphString;
         }
 
 
