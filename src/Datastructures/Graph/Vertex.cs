@@ -24,7 +24,9 @@ namespace AD
         /// <param name="name">The name of the new vertex</param>
         public Vertex(string name)
         {
-            throw new System.NotImplementedException();
+            this.name = name;
+            adj = new LinkedList<Edge>();
+            Reset();
         }
 
 
@@ -34,31 +36,33 @@ namespace AD
 
         public string GetName()
         {
-            throw new System.NotImplementedException();
+            return name;
         }
         public LinkedList<Edge> GetAdjacents()
         {
-            throw new System.NotImplementedException();
+            return adj;
         }
 
         public double GetDistance()
         {
-            throw new System.NotImplementedException();
+            return distance;
         }
 
         public Vertex GetPrevious()
         {
-            throw new System.NotImplementedException();
+            return prev;
         }
 
         public bool GetKnown()
         {
-            throw new System.NotImplementedException();
+            return known;
         }
 
         public void Reset()
         {
-            throw new System.NotImplementedException();
+            distance = Graph.INFINITY;
+            prev = null;
+            known = false;
         }
 
 
@@ -75,7 +79,23 @@ namespace AD
         /// <returns>The string representation of this Graph instance</returns> 
         public override string ToString()
         {
-            throw new System.NotImplementedException();
+            string vertexString = "";
+            vertexString += name;
+            if (Math.Abs(GetDistance() - Graph.INFINITY) > 1)
+            {
+              vertexString += " (" + distance + ")" + " [";
+            }
+            else
+            {
+                vertexString += " [";
+            }
+            
+            foreach (Edge e in adj.OrderBy(x => x.dest.name))
+            {
+                vertexString += e.dest.name + " (" + e.cost + ") ";
+            }
+
+            return vertexString + " ]";
         }
     }
 }
