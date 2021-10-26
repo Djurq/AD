@@ -82,6 +82,7 @@ namespace AD
                 {
                     parentNode.left = null;
                 }
+
                 return;
             }
 
@@ -91,12 +92,65 @@ namespace AD
 
         public void Remove(T x)
         {
-            throw new System.NotImplementedException();
+            if (root == null)
+            {
+                throw new BinarySearchTreeElementNotFoundException();
+            }
+
+            root = remove(root, x);
         }
+
+        public BinaryNode<T> remove(BinaryNode<T> root, T removeValue)
+        {
+            if (root == null)
+            {
+                throw new BinarySearchTreeElementNotFoundException();
+            }
+            
+            if (Convert.ToInt32(removeValue) < Convert.ToInt32(root.data))
+            {
+                root.left = remove(root.left, removeValue);
+            }
+            else if (Convert.ToInt32(removeValue) > Convert.ToInt32(root.data))
+            {
+                root.right = remove(root.right, removeValue);
+            }
+            else if (Convert.ToInt32(removeValue) == Convert.ToInt32(root.data))
+            {
+                if (root.left == null)
+                    return root.right;
+                if (root.right == null)
+                    return root.left;
+
+                root.data = findmin(root.right);
+                
+                root.right = remove(root.right, root.data);
+            }
+
+            return root;
+        }
+
 
         public string InOrder()
         {
-            throw new System.NotImplementedException();
+            return inorder(root).Trim();
+        }
+
+        public string inorder(BinaryNode<T> root)
+        {
+            if (root == null)
+            {
+                return "";
+            }
+
+            string toReturn = "";
+            toReturn += inorder(root.left) + root.data + " " + inorder(root.right);
+            return toReturn;
+        }
+
+        public override string ToString()
+        {
+            return InOrder();
         }
     }
 }
