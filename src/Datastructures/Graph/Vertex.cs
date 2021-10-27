@@ -82,13 +82,13 @@ namespace AD
         {
             string vertexString = "";
             vertexString += name;
-            if (GetDistance() == Graph.INFINITY)
+            if (GetDistance() != Graph.INFINITY)
             {
-                vertexString += " [";
+                vertexString += $" ({GetDistance()}) [";
             }
             else
             {
-                vertexString += " (" + GetDistance() + ")" + " [";
+                vertexString += " [";
             }
 
             foreach (Edge e in adj.OrderBy(x => x.dest.name))

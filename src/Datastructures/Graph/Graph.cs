@@ -33,9 +33,7 @@ namespace AD
         /// <param name="name">The name of the new vertex</param>
         public void AddVertex(string name)
         {
-            if (vertexMap.ContainsKey(name)) return;
-            Vertex newVertex = new Vertex(name);
-            vertexMap.Add(name, newVertex);
+            GetVertex(name);
         }
 
 
@@ -47,13 +45,10 @@ namespace AD
         /// <returns>The vertex withe the given name</returns>
         public Vertex GetVertex(string name)
         {
-            foreach (var vertex in vertexMap.Where(vertex => vertex.Key.Equals(name)))
-            {
-                return vertex.Value;
-            }
-            Vertex nonexistingVertex = new Vertex(name);
-            AddVertex(name);
-            return nonexistingVertex;
+            if (vertexMap.ContainsKey(name)) return vertexMap[name];
+            Vertex vertex = new Vertex(name);
+            vertexMap.Add(name, vertex);
+            return vertex;
         }
 
 
@@ -67,10 +62,9 @@ namespace AD
         /// <param name="cost">cost of the edge</param>
         public void AddEdge(string source, string dest, double cost = 1)
         {
-            Vertex w = GetVertex(dest);
-            AddVertex(source);
-            AddVertex(dest); 
-            vertexMap[source].adj.AddFirst(new Edge(w, cost));
+            Vertex vSourve = GetVertex(source);
+            Vertex vDest = GetVertex(dest);
+            vSourve.adj.AddFirst(new Edge(vDest, cost));
         }
 
 
@@ -80,9 +74,9 @@ namespace AD
         /// </summary>
         public void ClearAll()
         {
-            foreach (var vertex in vertexMap)
+            foreach (var vertex in vertexMap.Values)
             {
-                vertex.Value.Reset();
+                vertex.Reset();
             }
         }
 
@@ -93,27 +87,26 @@ namespace AD
         public void Unweighted(string name)
         {
             ClearAll();
+
+            Queue<Vertex> queue = new Queue<Vertex>();
             Vertex start = GetVertex(name);
-            if (start == null)
-            {
-                return;
-            }
-            Queue<Vertex> q = new Queue<Vertex>();
-            q.Enqueue(start);
+            
+            queue.Enqueue(start);
             start.distance = 0;
             start.known = true;
-            while (q.Count > 0)
+            
+            while (queue.Count > 0)
             {
-                Vertex v = q.Dequeue();
-                foreach (Edge edge in v.adj)
+                Vertex vertex = queue.Dequeue();
+                foreach (Edge edge in vertex.adj)
                 {
-                    Vertex w = edge.dest;
-                    w.distance = Math.Min(v.distance + 1, w.distance);
-                    if (!w.known)
+                    Vertex dest = edge.dest;
+                    dest.distance = Math.Min(vertex.distance + 1, dest.distance);
+                    if (!dest.known)
                     {
-                        w.known = true;
-                        w.prev = v;
-                        q.Enqueue(w);
+                        dest.known = true;
+                        dest.prev = vertex;
+                        queue.Enqueue(dest);
                     }
                 }
             }

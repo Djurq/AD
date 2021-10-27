@@ -35,7 +35,7 @@ namespace AD
         {
             if (size + 1 >= array.Length)
             {
-                size *= 2;
+                DoubleArray();
             }
 
             int hole = size++;
@@ -46,6 +46,17 @@ namespace AD
             }
 
             array[hole] = x;
+        }
+
+        public void DoubleArray()
+        {
+            T[] newArray = new T[array.Length * 2];
+            for (var i = 0; i < array.Length; i++)
+            {
+                newArray[i] = array[i];
+            }
+
+            array = newArray;
         }
 
         public int compare(T x, T arrayPosition)
