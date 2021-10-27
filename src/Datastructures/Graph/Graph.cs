@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -91,7 +92,31 @@ namespace AD
         /// <param name="name">The name of the starting vertex</param>
         public void Unweighted(string name)
         {
-            throw new System.NotImplementedException();
+            ClearAll();
+            Vertex start = GetVertex(name);
+            if (start == null)
+            {
+                return;
+            }
+            Queue<Vertex> q = new Queue<Vertex>();
+            q.Enqueue(start);
+            start.distance = 0;
+            start.known = true;
+            while (q.Count > 0)
+            {
+                Vertex v = q.Dequeue();
+                foreach (Edge edge in v.adj)
+                {
+                    Vertex w = edge.dest;
+                    w.distance = Math.Min(v.distance + 1, w.distance);
+                    if (!w.known)
+                    {
+                        w.known = true;
+                        w.prev = v;
+                        q.Enqueue(w);
+                    }
+                }
+            }
         }
 
         /// <summary>
@@ -118,7 +143,8 @@ namespace AD
             string graphString = "";
             foreach (string key in vertexMap.Keys.OrderBy(x => x))
             {
-                graphString += vertexMap[key].ToString() + "\n";
+                graphString += vertexMap[key] + "\n";
+                Console.WriteLine(vertexMap[key].name + " " + vertexMap[key].distance);
             }
 
             return graphString;

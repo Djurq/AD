@@ -38,6 +38,7 @@ namespace AD
         {
             return name;
         }
+
         public LinkedList<Edge> GetAdjacents()
         {
             return adj;
@@ -81,15 +82,15 @@ namespace AD
         {
             string vertexString = "";
             vertexString += name;
-            if (Math.Abs(GetDistance() - Graph.INFINITY) > 1)
-            {
-              vertexString += " (" + distance + ")" + " [";
-            }
-            else
+            if (GetDistance() == Graph.INFINITY)
             {
                 vertexString += " [";
             }
-            
+            else
+            {
+                vertexString += " (" + GetDistance() + ")" + " [";
+            }
+
             foreach (Edge e in adj.OrderBy(x => x.dest.name))
             {
                 vertexString += e.dest.name + " (" + e.cost + ") ";
