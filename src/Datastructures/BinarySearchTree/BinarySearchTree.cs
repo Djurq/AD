@@ -22,7 +22,7 @@ namespace AD
                 return newNode;
             }
 
-            if (Convert.ToInt32(newNode.data) < Convert.ToInt32(root.data))
+            if (newNode.data.CompareTo(root.data) < 0)
             {
                 root.left = insert(root.left, newNode);
                 return root;
@@ -106,15 +106,15 @@ namespace AD
                 throw new BinarySearchTreeElementNotFoundException();
             }
             
-            if (Convert.ToInt32(removeValue) < Convert.ToInt32(root.data))
+            if (removeValue.CompareTo(root.data) < 0)
             {
                 root.left = remove(root.left, removeValue);
             }
-            else if (Convert.ToInt32(removeValue) > Convert.ToInt32(root.data))
+            else if (removeValue.CompareTo(root.data) > 0)
             {
                 root.right = remove(root.right, removeValue);
             }
-            else if (Convert.ToInt32(removeValue) == Convert.ToInt32(root.data))
+            else if (removeValue.CompareTo(root.data) == 0)
             {
                 if (root.left == null)
                     return root.right;
