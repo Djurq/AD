@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AD
+﻿namespace AD
 {
     class Program
     {
@@ -21,7 +19,7 @@ namespace AD
             }
             catch (MyArrayListIndexOutOfRangeException e)
             {
-                System.Console.WriteLine(e.Message);
+                System.Console.WriteLine("Exception (zoals verwacht): {0}", e.Message);
             }
             al.Set(2, 4);
             System.Console.WriteLine(al);
@@ -103,7 +101,7 @@ namespace AD
             }
             catch (MyStackEmptyException e)
             {
-                System.Console.WriteLine(e.Message);
+                System.Console.WriteLine("Exception (zoals verwacht): {0}", e.Message);
             }
         }
 
@@ -144,7 +142,7 @@ namespace AD
             }
             catch (MyQueueEmptyException e)
             {
-                System.Console.WriteLine(e.Message);
+                System.Console.WriteLine("Exception (zoals verwacht): {0}", e.Message);
             }
         }
 
@@ -153,9 +151,9 @@ namespace AD
         {
             Ex1ArrayList();
             Ex2LinkedList();
-            //Ex3Stack();
-            //Ex4BracketChecker();
-            //Ex5Queue();
+            Ex3Stack();
+            Ex4BracketChecker();
+            Ex5Queue();
         }
     }
 }

@@ -11,7 +11,7 @@ namespace AD
         [Test, Combinatorial]
         public void Sort(
                     [Values("InsertionSort", "MergeSort", "ShellSort", "QuickSort")] string sorterName,
-                    [Values(0, 10, 300)] int n)
+                    [Values(0, 1, 2, 10, 3000)] int n)
         {
             List<int> list = new List<int>();
             List<int> listCopy;
@@ -20,7 +20,7 @@ namespace AD
 
             // Arrange
             sorter = DSBuilder.CreateSorter(sorterName);
-            Assert.IsNotNull(sorter != null);
+            Assert.IsNotNull(sorter);
 
             // Arrange
             for (int i = 0; i < n; i++)
@@ -34,6 +34,30 @@ namespace AD
             // Assert
             bool equal = list.SequenceEqual(listCopy);
             Assert.IsTrue(equal);
+        }
+        
+        [Test, Combinatorial]
+        public void SortSame(
+                    [Values("InsertionSort", "MergeSort", "ShellSort", "QuickSort")] string sorterName)
+        {
+            List<int> list = new List<int>();
+            Sorter sorter;
+
+            // Arrange
+            sorter = DSBuilder.CreateSorter(sorterName);
+            Assert.IsNotNull(sorter);
+
+            // Arrange
+            for (int i = 0; i < 20; i++)
+                list.Add(5);
+
+            // Act
+            sorter.Sort(list);
+
+            // Assert
+            Assert.AreEqual(20, list.Count);
+            for (int i = 0; i < 20; i++)
+                Assert.AreEqual(5, list[i]);
         }
     }
 }
