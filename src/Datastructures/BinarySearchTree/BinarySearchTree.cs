@@ -143,7 +143,7 @@ namespace AD
             }
 
             string toReturn = "";
-            toReturn += inorder(root.left) + root.data + " " + inorder(root.right);
+            toReturn += inorder(root.GetLeft()) + root.GetData() + " " + inorder(root.GetRight());
             return toReturn;
         }
 
