@@ -22,6 +22,11 @@ namespace AD
                 return newNode;
             }
 
+            if (newNode.data.CompareTo(root.data) == 0)
+            {
+                throw new BinarySearchTreeDoubleKeyException();
+            }
+
             if (newNode.data.CompareTo(root.data) < 0)
             {
                 root.left = insert(root.left, newNode);
