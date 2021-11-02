@@ -118,7 +118,30 @@ namespace AD
         /// <param name="name">The name of the starting vertex</param>
         public void Dijkstra(string name)
         {
-            throw new System.NotImplementedException();
+            Vertex start = GetVertex(name);
+            start.distance = 0;
+            PriorityQueue<Vertex> priorityQueue = new PriorityQueue<Vertex>();
+            priorityQueue.Add(start);
+
+            while (priorityQueue.size != 0)
+            {
+                Vertex currentVertex = priorityQueue.Remove();
+                if (currentVertex.known)
+                    continue;
+                currentVertex.known = true;
+                foreach (Edge edge in currentVertex.GetAdjacents())
+                {
+                    if (!edge.dest.known)
+                    {
+                        if (currentVertex.distance + edge.cost < edge.dest.distance)
+                        {
+                            edge.dest.distance = currentVertex.distance + edge.cost;
+                            edge.dest.prev = currentVertex;
+                        }
+                        priorityQueue.Add(edge.dest);
+                    }
+                }
+            }
         }
 
         //----------------------------------------------------------------------
