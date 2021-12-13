@@ -5,6 +5,7 @@ namespace AD
     public partial class MyLinkedList<T> : IMyLinkedList<T>
     {
         public MyLinkedListNode<T> first;
+        public MyLinkedListNode<T> last;
         private int size;
 
         public MyLinkedList()
@@ -17,6 +18,15 @@ namespace AD
             newNode.data = data;
             newNode.next = first;
             first = newNode;
+            size++;
+        }
+
+        public void AddLast(T data)
+        {
+            MyLinkedListNode<T> newNode = new MyLinkedListNode<T>();
+            newNode.data = data;
+            last.next = newNode;
+            last = newNode;
             size++;
         }
 
